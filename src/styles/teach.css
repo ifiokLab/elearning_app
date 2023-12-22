@@ -1,0 +1,151 @@
+
+.hero-wrapper{
+    position: relative;
+    margin-top: 60px;
+}
+.hero-wrapper .teach-wrapper{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 5%;
+    background-color: white;
+    padding: 10px 20px;
+}
+.hero-wrapper img{
+    height: 80vh;
+    width: auto;
+    object-fit: cover;
+}
+.hero-wrapper .teach-wrapper h1{
+    margin: 0;
+    font-size: 1.3rem;
+}
+.hero-wrapper .teach-wrapper .text{
+    font-size: .9rem;
+    margin: 5px;
+}
+.hero-wrapper .teach-wrapper .teach-btn{
+    background-color: #2d2f31;
+   
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.start-reasons{
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inspire-container{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inspire-container .box-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+.inspire-container .box-wrapper i{
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+.inspire-container .box-wrapper .title{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.inspire-container .box-wrapper .text{
+    text-align: center;
+    font-size: .8rem;
+}
+
+.how-begin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 6%;
+}
+.how-begin .title{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.curriculum-container{
+    padding: 20px 6%;
+}
+.curriculum-container .section-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.curriculum-container .section-header .tab{
+    padding: 5px 20px;
+    font-weight: 900;
+    font-size: .9rem;
+    cursor: pointer;
+}
+.curriculum-container .section-header .tab.show{
+    border-bottom: solid #2d2f31 1px;
+}
+.curriculum-container .section-body .section-body-wrapper{
+    display: flex;
+    padding: 10px 0;
+}
+.curriculum-container .section-body .section-body-wrapper .text{
+    font-size: .9rem;
+}
+.curriculum-container .section-body .section-body-wrapper img{
+    height: 300px;
+    width: auto;
+    
+}
+@media screen and (max-width:699px) {
+    .curriculum-container .section-header .tab{
+        width: 100%;
+    }
+    .curriculum-container .section-header{
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        flex-direction: column;
+    }
+    .curriculum-container .section-body .section-body-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .inspire-container .box-wrapper{
+        margin: 20px 0;
+    }
+    .start-reasons{
+        font-size: .8rem;
+    }
+    .inspire-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 4%;
+    }
+    .hero-wrapper {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-wrapper .teach-wrapper{
+        position: unset;
+        width: 100%;
+    }
+    .hero-wrapper img{
+        height: 40vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}

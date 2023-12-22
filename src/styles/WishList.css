@@ -1,0 +1,20 @@
+
+.course-wrapper .course-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-rows: repeat(auto,390px);
+    grid-auto-rows: 240px;
+    gap: 1.0rem; 
+}
+
+.course-wrapper .course-container .card{
+    position: relative;
+}
+
+.course-wrapper .course-container .card .heart-btn{
+    position: absolute;
+    padding: 5px;
+    color: white;
+    top: 8px;
+    right: 8px;
+}

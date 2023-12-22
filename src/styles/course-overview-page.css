@@ -1,0 +1,225 @@
+
+.course-header{
+    background-color: #2d2f31;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    color: white;
+}
+.course-header .wrapper{
+    display: flex;
+    align-items: center;
+    
+}
+.course-header .wrapper .course-title{
+    color: white;
+}
+.course-header .wrapper .logo{
+    color: white;
+    font-weight: 900;
+    margin-right: 30px;
+}
+.course-header .icon {
+    border: solid white 1px;
+    padding: 6px 18px;
+    font-size: .9rem;
+}
+.course-header .icon i{
+    color: white;
+}
+.course-header .back-arrow{
+    display: none;
+    
+}
+.course-body{
+    display: flex;
+}
+.course-body .container-1{
+    flex: 1;
+    background-color: #2d2f31;
+    padding: 20px 6%;
+    position: relative;
+
+}
+.course-body .container-1 .content-modal{
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    padding: 5px 10px;
+   
+}
+.course-body .container-1 .content-modal.show{
+    display: flex;
+    align-items: center;
+}
+.course-body .container-1 .content-modal .text{
+    display: none;
+    margin-left: 5px;
+}
+.course-body .container-1 .content-modal:hover .text{
+    display: block;
+}
+.course-body .container-2{
+    width: 350px;
+    display: none;
+}
+.course-body .container-2.show{
+    display: block;
+}
+.course-body .container-2 .content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: solid #d1d7dc 1px;
+    background-color: white;
+}
+.course-body .container-2 .wrapper{
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.accordion-container{
+    border: 1px solid #d1d7dc;
+    
+}
+.accordion-container .section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-bottom: 1px solid #d1d7dc;
+}
+.accordion-container .section-header i{
+    margin-right: 8px;
+}
+
+.accordion-wrapper .accordion-container .section-body .card{
+    padding: 5px 20px;
+   
+}
+.course-slider{
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+.course-slider .tab{
+    margin-right: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: .8rem;
+    font-weight: 800;
+}
+.course-slider .tab.show{
+    border-bottom: solid #2d2f31 1px;
+}
+
+.slider-container-content{
+    padding: 20px 6%;
+}
+.slider-container-content .about{
+    border-bottom: solid #d1d7dc 1px;
+    padding: 10px 0;
+}
+.slider-container-content .about .title{
+    font-weight: 900;
+    font-size: 1rem;
+}
+.slider-container-content .about .body{
+    font-size: .8rem;
+}
+
+
+.author-container{
+   border-bottom: solid #d1d7dc 1px;
+}
+
+.author-container .profile-container img{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 70px;
+}
+.author-container .profile-container .caption{
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.author-container .profile-container  .name{
+    color: #7325a3;
+    font-weight: 900;
+}
+
+.author-container .profile-container .description{
+    margin-top: 10px;
+    font-size: .8rem;
+}
+
+.annoucement-container{
+    margin: 15px 0;
+}
+.annoucement-container .profile{
+    display: flex;
+}
+.annoucement-container .profile img{
+    height: 50px;
+    width:50px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+.annoucement-container .profile .profile-details .name{
+    color: #7325a3;
+    font-weight: 900;
+    font-size: .9rem;
+   
+}
+.annoucement-container .profile .profile-details .time{
+    font-size: .8rem;
+}
+.annoucement-container .title{
+    font-size: .9rem;
+    font-weight: 900;
+}
+.annoucement-container  .description{
+    font-size: .8rem
+}
+
+@media screen and (max-width:899px) {
+    .course-body .container-2.show{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .course-slider{
+        overflow-x: scroll;
+    }
+    .course-slider .tab{
+        white-space: nowrap;
+    }
+    .course-header .wrapper .course-title{
+        color: white;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 300px;
+    }
+    .course-header .wrapper .logo{
+        display: none;
+    }
+    .course-header .back-arrow i{
+        color:white
+    }
+    .course-header .back-arrow{
+        display: block;
+        margin-right: 10px;
+        color: white;
+    }
+}

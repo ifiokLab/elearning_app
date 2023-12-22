@@ -1,0 +1,18 @@
+
+
+.page-wrapper .wrapper{
+    padding: 20px 6%;
+    margin-top: 50px;
+}
+.course-wrapper .course-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-rows: repeat(auto,200px);
+    grid-auto-rows: 200px;
+    gap: 1.0rem; 
+}
+
+.page-wrapper .wrapper .time-text{
+    font-size: .8rem;
+    margin-bottom: 5px;
+}

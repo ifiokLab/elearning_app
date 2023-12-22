@@ -1,0 +1,65 @@
+
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+  
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+form .btn-wrapper{
+    display: flex;
+    justify-content:flex-end;
+   
+}
+form .form-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form .form-header span{
+    margin-right: 5px;
+}
+form .btn-wrapper button{
+    background-color: #282828;
+    padding: 10px 20px;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+}
+  
+input,textarea,select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+select{
+    cursor: pointer;
+}
+  
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+    background-color: white;
+}
+  
+.active label,
+  input:focus ~ label, textarea:focus ~ label  {
+    top: -10px;
+    font-size: 12px;
+    color: #2196F3;
+}
+  

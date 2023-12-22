@@ -1,0 +1,34 @@
+
+.footer{
+    flex-shrink: 0;
+    padding: 16px 6%;
+    background-color: #282828;
+    color: white;
+}
+.footer .footer-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+    grid-template-rows: repeat(2,auto);
+    grid-auto-rows: auto;
+    gap: 1.0rem;
+
+}
+
+.footer .f-headline{
+    font-weight: 900;
+    padding-bottom: 1rem;
+    font-size: 14px;
+    color: #c7c7cd;;
+}
+.footer .f-item{
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+.footer .f-item a{
+    text-decoration: none;
+    color: #c7c7cd;;
+}
+.footer .f-item a:hover{
+    color: #f68b1e;
+    text-decoration: underline;
+}

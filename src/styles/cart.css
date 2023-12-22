@@ -1,0 +1,107 @@
+
+
+.page-wrapper{
+    padding: 20px 0;
+    margin-top: 50px;
+}
+.page-wrapper .wrapper .inner-wrapper{
+    display: flex;
+}
+.page-wrapper .wrapper .cart-container-1{
+  
+    flex: 1;
+  
+}
+.page-wrapper .wrapper .cart-container-2{
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-left: 10px;
+    padding: 20px;
+    align-self: flex-start;
+}
+.page-wrapper .wrapper .total-card .price{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.page-wrapper .wrapper .cart-container-2 .checkout-btn{
+    background-color: #5624d0;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+}
+.cart-container-1 .cart-card{
+    display: flex;
+    border: solid #d1d7dc 1px;
+    padding: 5px;
+    margin: 5px 0;
+    
+}
+.cart-container-1 .cart-card img{
+    height: auto;
+    width: 150px;
+    object-fit: cover;
+}
+
+.cart-container-1 .cart-card .details-wrapper{
+    flex: 1;
+}
+.cart-container-1 .cart-card .details-wrapper .title-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-container-1 .cart-card .details-wrapper .title-wrapper .title{
+    font-size: .8rem;
+    font-weight: 700;
+}
+.cart-container-1 .cart-card .details-wrapper .price-wrapper .price{
+    color: #5624d0;
+    font-weight: 900;
+}
+.cart-container-1 .cart-card .details-wrapper .price-wrapper .discount{
+    text-decoration: line-through;
+    color: #9da3a7;
+}
+.cart-container-1 .cart-card .details-wrapper .author{
+    color: #9da3a7;
+    font-weight: 700;
+}
+.cart-card .ratings-card{
+    font-size: .8rem;
+}
+.cart-card .ratings-card .stars{
+    margin: 0 3px;
+}
+
+.cart-card .ratings-card i{
+    color: #f69c08;
+   
+}
+
+.cart-card .stats{
+    font-size: .8rem;
+}
+@media screen and (max-width:799px) {
+    .cart-container-1 .cart-card img{
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+        margin-right: 15px;
+       
+    }
+    .page-wrapper .wrapper .inner-wrapper{
+        flex-direction: column-reverse;
+
+    } 
+    .page-wrapper .wrapper .cart-container-2{
+        width: unset;
+       
+        align-self: unset;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .page-wrapper .wrapper .cart-container-1{
+        flex: unset;
+       
+    }
+}

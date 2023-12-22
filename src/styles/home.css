@@ -1,0 +1,179 @@
+
+.hero-container{
+    margin-top: 65px;
+}
+.hero-container img{
+    height: 65vh;
+    width: 100%;
+}
+.hero-container .dream-container{
+    position: absolute;
+    margin-bottom: 22px;
+    background-color: white;
+    
+    width: 400px;
+    top: 20%;
+    left: 4%;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    
+}
+.hero-container .dream-container .search-box{
+    border: solid #6a6f73 1.2px;
+    border-radius: 8px;
+    display: flex;
+    padding: 3px;
+}
+.hero-container .dream-container .search-box input{
+    flex-grow: 1;
+    border: transparent;
+    padding: 12px 20px;
+}
+.hero-container .dream-container .search-box input:focus{
+    outline: transparent;
+}
+.hero-container .dream-container .search-box .icon{
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.mobile-dream{
+    display: none;
+}
+
+.course-wrapper{
+    padding: 20px 40px;
+}
+.course-wrapper .course-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-rows: repeat(auto,390px);
+    grid-auto-rows: 240px;
+    gap: 1.0rem;
+   
+   
+}
+.course-wrapper .course-container .card{
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.course-wrapper .course-container .card img{
+    height: 40%;
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.course-wrapper .course-container .card-details{
+    padding: 0 15px;
+}
+.course-wrapper .course-container .card-details h2{
+    font-size: .85rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    white-space: normal; 
+}
+.course-wrapper .course-container .card-details .author-name{
+    color: #6a6f73;
+    font-size: .8rem;
+}
+.course-wrapper .course-container .card-details .stars i{
+    color: gold;
+    font-size: .8rem;
+}
+.course-wrapper .course-container .card-details .box{
+    margin-right: 5px;
+    margin-top: 3px;
+    font-weight: 600;
+}
+.course-wrapper .course-container .card-details .price-card {
+    margin-top: 10px;
+    font-size: .8rem;
+}
+.course-wrapper .course-container .card-details .price-card .price{
+    font-weight: 900;
+    margin-right: 10px;
+}
+.course-wrapper .course-container .card-details .price-card .discount{
+    font-weight: 900;
+   color: #6a6f73;
+   text-decoration: line-through;
+}
+.course-wrapper .course-container .card-details .ratings-card{
+    font-size: .8rem;
+   
+}
+.category-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.category-wrapper .container{
+    padding: 10px 80px;
+   
+}
+.category-wrapper .container .title{
+    font-weight: 900;
+   
+}
+
+.category-wrapper .container-wrapper .card{
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 15px 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.category-wrapper .container-wrapper .card .icon{
+    margin-right: 5px;
+}
+
+@media screen and (max-width:799px){
+    
+    .hero-container .dream-container{
+        display: none;
+       
+    }
+    .hero-container img{
+        height: 40vh;
+        object-fit: cover;
+    }
+    .mobile-dream{
+        display: block;
+    }
+    .mobile-dream .dream-container{
+        margin-bottom: 22px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    .mobile-dream  .dream-container .search-box{
+        border: solid #6a6f73 1.2px;
+        border-radius: 8px;
+        display: flex;
+        padding: 3px;
+    }
+    .mobile-dream  .dream-container .search-box input{
+        flex-grow: 1;
+        border: transparent;
+        padding: 12px 20px;
+    }
+    .mobile-dream  .dream-container .search-box input:focus{
+        outline: transparent;
+    }
+    .mobile-dream  .dream-container .search-box .icon{
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+}

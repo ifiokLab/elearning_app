@@ -1,0 +1,93 @@
+
+
+
+.page-wrapper .wrapper{
+    margin-top: 0px;
+    padding: 20px 6%;
+}
+
+.page-wrapper .course-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+.page-wrapper .course-header .title{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.page-wrapper .course-header .create-course{
+    background-color: #5624d0;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 16px;
+    color: white;
+    font-size: .8rem;
+}
+.page-wrapper  .course-box{
+    display: flex;
+    padding: 10px;
+    border: solid #9da3a7 1px;
+    margin: 10px 0;
+}
+.page-wrapper  .course-box img{
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+.page-wrapper .course-box .details-card{
+    flex: 1;
+    position: relative;
+}
+.page-wrapper .course-box .details-card .box-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-wrapper .course-box .details-card .box-1 .edit{
+    color: #5624d0;
+    font-size: .9rem;
+    cursor: pointer;
+}
+.page-wrapper .course-box .details-card .status{
+    position: absolute;
+    bottom: 0;
+}
+.page-wrapper .course-box .details-card .status span:nth-child(1) {
+    font-size: .8rem;
+    font-weight: 800;
+    color: #6a6f73;
+}
+.page-wrapper .course-box .details-card .status span:nth-child(2){
+    font-size: .8rem;
+    color: #6a6f73;
+    margin: 0 5px;
+}
+.page-wrapper .course-box .details-card .title{
+    font-weight: 900;
+    font-size: .8rem;
+}
+
+@media screen and (max-width:699px) {
+    .page-wrapper .course-box .details-card .box-1{
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+    }
+    .page-wrapper .course-box .details-card .title{
+        margin-bottom: 12px;
+    }
+    .page-wrapper  .course-box img{
+        width: 80px;
+        height: auto;
+        object-fit: cover;
+    }
+    .page-wrapper .course-box .details-card .status{
+        position: unset;
+        bottom: unset;
+        
+    }
+    
+}

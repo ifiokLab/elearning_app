@@ -1,0 +1,333 @@
+
+.page-wrapper{
+    flex: 2;
+    
+}
+.landing-page-wrapper{
+    background-color: #2d2f31;
+    color:white ;
+    padding: 35px 6%;
+    margin-top: 50px;
+}
+.landing-page-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+.landing-page-container .container1{
+    flex: 1;
+}
+.landing-page-container .container2{
+    margin-left: 40px;
+    
+}
+.landing-page-container .container1 .course-title{
+    font-size: 1.5rem;
+    color: white;
+}
+.landing-page-container .container1 .course-description{
+    color: white;
+}
+
+.landing-page-container .container1 .ratings-box span{
+    color: #f69c08;
+    font-size: .8rem;
+}
+.landing-page-container .container1 .ratings-box i{
+    color: #f69c08;
+    font-size: .8rem;
+    margin-right: 1.5px;
+}
+.landing-page-container .container1 .ratings-box .ratings-num{
+    font-weight: 800;
+    margin-right: 5px;
+}
+.landing-page-container .container1 .ratings-box .student-num{
+    color: white;
+    font-weight: 800;
+    font-size: .8rem;
+}
+.landing-page-container .container1 .ratings-container{
+   margin-top: 10px;
+}
+.landing-page-container .container1 .author-card span{
+    color: white;
+}
+.landing-page-container .container2 .preview-container{
+    position: relative;
+    cursor: pointer;
+}
+.landing-page-container .container2 .preview-container .btn-wraper{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-page-container .container2 .preview-container img{
+    height: 12.5rem;
+    width: 20rem;
+    object-fit: cover;
+}
+.landing-page-container .container2 .preview-container .image-overlay .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.landing-page-container .container2 .preview-container .image-overlay{
+    background: linear-gradient(180deg,rgba(45,47,49,0) 0%,rgba(45,47,49,0.9) 100%);
+    position: absolute;
+    top: 0;right: 0;left: 0;bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-page-container .container2 .preview-container .image-overlay .preview-text{
+    color: white;
+    margin-top: 3px;
+}
+
+.landing-page-container .container2 .preview-container .preview-course{
+    position: absolute;
+    top: 12rem;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    padding: 20px;
+}
+.landing-page-container .container2 .preview-course .price-container{
+    display: flex;
+    align-items: center;
+}
+.landing-page-container .container2  .price-container .price{
+    font-weight: 800;
+    font-size: 2rem;
+    margin-right: 50px;
+}
+.landing-page-container .container2  .price-container .discount{
+    text-decoration: line-through;
+    color: gray;
+    font-weight: 800;
+    margin-right: 4px;
+}
+.landing-page-container .container2  .cart-wrapper{
+    display: flex;
+}
+.landing-page-container .container2 .cart-btn{
+    background-color: #a435f0;
+    flex: 1;
+    text-align: center;
+    padding: 10px 0px;
+    color: white;
+}
+.landing-page-container .container2 .cart-btn:hover{
+    background-color: #7325a3;
+}
+.landing-page-container .container2 .heart-btn{
+   padding: 6px 14px;
+   text-align: center;
+   font-size: 1.4rem;
+   margin-left: 8px;
+   border: 1px solid #2d2f31;
+}
+.landing-page-container .container2 .heart-btn:hover{
+    background-color: #e4e8eb;
+}
+.landing-page-container .container2 .buy{
+    border: 1px solid #2d2f31;
+    text-align: center;
+    padding: 10px 0;
+    margin: 7px 0;
+}
+.landing-page-container .container2 .buy:hover{
+    background-color: #e4e8eb;
+}
+.landing-page-container .container2  .preview-course .title{
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 32px 0 6px 0;
+}
+.landing-page-container .container2  .preview-course .card{
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+}
+.landing-page-container .container2  .preview-course .card i{
+    margin-right: 15px;
+}
+
+.what-learn-wrapper {
+    padding: 20px 6%;
+}
+.what-learn-wrapper .wrapper{
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+.what-learn-wrapper .wrapper .title{
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.what-learn-wrapper .wrapper .what-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+    grid-template-rows: repeat(2,auto);
+    grid-auto-rows: auto;
+    gap: .5rem;
+}
+.what-learn-wrapper .wrapper .what-container .cards{
+    display: flex; 
+    font-size: .9rem;
+}
+.what-learn-wrapper .wrapper .what-container .cards i{
+    margin-right: 15px;
+    font-weight: 900;
+}
+
+.accordion-wrapper{
+    padding: 20px 6%;
+}
+.accordion-wrapper .wrapper{
+    max-width: 600px;
+}
+.accordion-wrapper .accordion-header .title{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.accordion-wrapper .accordion-container{
+    border: 1px solid #d1d7dc;
+    
+}
+.accordion-container .section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-bottom: 1px solid #d1d7dc;
+}
+.accordion-container .section-header i{
+    margin-right: 8px;
+}
+
+.accordion-wrapper .accordion-container .section-body .card{
+    padding: 5px 20px;
+   
+}
+
+.requirements-container{
+    padding: 20px 6%;
+}
+.requirements-container .wrapper .title{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.requirements-container .wrapper li{
+    font-size: .9rem;
+}
+
+.description-container{
+    padding: 20px 6%;
+}
+.description-container .title{
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+.description-container .text{
+    font-size: .9rem;
+}
+
+.author-container{
+    padding: 20px 6%;
+}
+
+.author-container .profile-container img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.author-container .profile-container .caption{
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.author-container .profile-container  .name{
+    color: #7325a3;
+    font-weight: 900;
+}
+
+.author-container .profile-container .description{
+    margin-top: 10px;
+    font-size: .9rem;
+}
+
+.review-wrapper{
+    padding: 20px 6%;
+}
+.review-wrapper .wrapper{
+    max-width: 800px;
+    display: flex;
+}
+.review-wrapper .wrapper .cards{
+    border: solid #d1d7dc 1px;
+    padding: 10px;
+    flex: 1;
+   
+}
+.review-wrapper .wrapper .cards .box-1{
+    display: flex;
+}
+.review-wrapper .wrapper .cards .box-1 .author-initials{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: #2d2f31;
+    
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.review-wrapper .wrapper .cards .box-1 .name{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.review-wrapper .wrapper .cards .box-1 .date{
+    padding: 0;
+    margin: 0;
+}
+.review-wrapper .wrapper .cards .box-2{
+    font-size: .86rem;
+    margin-top: 5px;
+}
+.review-wrapper .wrapper .cards .box-1 .date i{
+    font-size: .8rem;
+    color: #f69c08;
+}
+.review-wrapper .wrapper .cards .box-1 .date span{
+    font-size: .8rem;
+}
+@media screen and (max-width:992px) {
+    .landing-page-container{
+        flex-direction: column-reverse;
+   } 
+    .landing-page-container .preview-course{
+        display: none;
+   }
+   .landing-page-container .container2 .preview-container img{
+        width: 100%;
+        height: auto;
+       
+   }
+   .landing-page-container .container2{
+        margin-left: 0px;
+        
+    }
+}
