@@ -1,0 +1,78 @@
+
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+  
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+.form-group .eye-icon{
+    position: absolute;
+    right: 10px;
+    top:20%;
+}
+form .btn-wrapper{
+    display: flex;
+    justify-content: unset;
+    margin-top: 30px;
+    
+}
+form .form-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+form .form-header i{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+form .form-header span{
+    font-size: .8rem;
+    font-weight: unset;
+    margin: 6px 0;
+   
+}
+form .btn-wrapper button{
+    background-color: #282828;
+    padding: 10px 20px;
+    border: transparent;
+    color: white;
+    flex: 1;
+    cursor: pointer;
+}
+  
+input,textarea,select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+select{
+    cursor: pointer;
+}
+  
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+    background-color: white;
+}
+  
+.active label,
+  input:focus ~ label, textarea:focus ~ label  {
+    top: -10px;
+    font-size: 12px;
+    color: #2196F3;
+}
+  

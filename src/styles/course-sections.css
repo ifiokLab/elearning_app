@@ -1,0 +1,46 @@
+
+.section-wrapper{
+    border: solid #2d2f31 1px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.section-wrapper .input-wrapper {
+    border: solid #2d2f31 1px;
+    padding: 10px;
+}
+.content-wrapper{
+    border: solid #2d2f31 1px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.section-wrapper .input-wrapper input{
+    margin: 5px 0;
+}
+.section-wrapper .add-section-btn{
+    border: solid #2d2f31 1px;
+    background-color: transparent;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+}
+.section-wrapper .save-content{
+    background-color: #2d2f31;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: transparent;
+}
+.section-wrapper .add-section-btn i{
+    margin-right: 4px;
+}
+
+.section-wrapper .delete-section-btn{
+    background-color: transparent;
+    border: transparent;
+    margin-left: 20px;
+    padding: 6px;
+}
+.section-wrapper .delete-section-btn i{
+    color: red;
+}

@@ -16,6 +16,9 @@ import Cart from './pages/cart';
 import WishList from './pages/wishlist';
 import Instructor from './pages/instructor';
 import CreateCourse from './pages/create-course';
+import CourseSections from './pages/course-sections';
+import Signup from './pages/signup';
+import Login from './pages/login';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="course-detail" element={<CourseDetailPage />} />
+      <Route path="signup" element={<Signup />} />
+      <Route path="login" element={<Login />} />
+      <Route path="course-sections" element={<CourseSections />} />
       <Route path="create-course" element={<CreateCourse />} />
       <Route path="instructor" element={<Instructor />} />
       <Route path="cart" element={<Cart />} />
