@@ -3,7 +3,7 @@
     flex: 1;
 }
 .header{
-    padding: 0px 20px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +11,7 @@
     z-index: 1000;
     top: 0;right: 0;left: 0;
     box-shadow: 0 10px 10px -4px rgb(0 0 0 / 12%);
-    background-color: white;
+    background-color:#2d2f31;
    
 }
 
@@ -47,6 +47,8 @@
     font-weight: 600;
     margin-right: 5px;
     padding: 15px 0;
+    color: white;
+    text-decoration: none;
 }
 
 .header .category-tab{
@@ -57,6 +59,11 @@
 
     height: 100%;
     padding: 20px 0px;
+    
+}
+
+.header .category-tab .title{
+    color: white;
 }
 .header .category-tab:hover .category-menu{
     display: block;
@@ -83,7 +90,68 @@
 
 .header .category-tab .category-section:hover .sub-category{
     display: block;
+    background-color: white;
    
+}
+.header .user-icon-container{
+    background-color: #2d2f31;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px white;
+}
+.header .user-icon-container .initial{
+    font-size: .8rem;
+    font-weight: 800;
+    color: white;
+}
+.header .user-icon-container:hover  .profile-card-container{
+    display:flex ;
+    flex-direction: column;
+}
+.header .profile-card-container{
+    position: absolute;
+    top: 40px;
+    right: -10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 150px;
+    
+    z-index: 2000;
+    display: none;
+    
+  
+
+}
+.profile-card-container .profile-link{
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.profile-card-container .logout{
+    align-items: center;
+    margin-top: 12px;
+}
+.profile-card-container .logout i{
+    margin-right: 4px;
+
+   
+}
+.profile-card-container .profile-link:hover{
+    background-color: #f7f9fa;
+}
+.header .user-icon-container .dot{
+    position: absolute;
+    top: 0;
+    color: #8fce00;
+    right: -5px;
 }
 .header .category-tab .sub-category{
     position: absolute;
@@ -106,9 +174,14 @@
     position: relative;
     cursor: pointer;
     padding: 20px 0;
+
 }
 .header .teach:hover .teach-tab{
     display: block;
+}
+.header .teach .title{
+    text-decoration: none;
+    color: white;
 }
 .header .teach .teach-tab{
     display: none;
@@ -183,6 +256,20 @@
     padding: 10px 20px;
     text-decoration: none;
 }
+.header .offline-login{
+    background-color: white;
+    padding: 10px 20px;
+    font-size: .9rem;
+    text-decoration: none; 
+}
+.header .offline-signup{
+    padding: 10px 20px;
+    font-size: .9rem;
+    text-decoration: none; 
+    color: white;
+    border: solid white 1px;
+    margin-left: 10px;
+}
 .header .signup{
     font-size: .9rem; 
     background-color: #2d2f31;
@@ -217,16 +304,25 @@
         top: 0;
         left: 0;
         right: 0;
-        background-color: white;
+        background-color: #2d2f31;
         z-index: 1000;
+        color: white;
     }
     .mobile-navigation .menu-btn{
         font-size: 1rem;
         font-weight: 600;
+        
+    }
+    .mobile-navigation .menu-btn i{
+        color: white;
     }
     .mobile-navigation .mobile-logo{
         font-weight: 600;
         font-size: 1.2rem;
+        color: white;
+    }
+    .mobile-navigation .mobile-logo .title{
+        color: white;
     }
     .mobile-navigation .mobile-extra{
         display: flex;
@@ -236,6 +332,12 @@
         font-size: 1rem;
         font-weight: 600;
         margin-right: 10px;
+    }
+    .mobile-navigation .mobile-extra .cart i{
+        color: white;
+    }
+    .mobile-navigation .mobile-extra .search i{
+        color: white;
     }
     .mobile-navigation .mobile-extra .search{
         font-size: 1rem;

@@ -14,9 +14,11 @@
     padding: 0;
     margin: 0;
 }
+
 .page-wrapper .course-header .title{
     font-size: 1rem;
     font-weight: 800;
+ 
 }
 .page-wrapper .course-header .create-course{
     background-color: #5624d0;
@@ -36,6 +38,31 @@
     width: 100px;
     height: auto;
     object-fit: cover;
+    margin-right: 10px;
+}
+.course-box .requirements{
+    background-color: #2d2f31;
+    font-size: .7rem;
+    color: white;
+    text-decoration: none;
+    padding: 5px ;
+  
+}
+.course-box .objectives{
+    border: solid #2d2f31 1px;
+    font-size: .7rem;
+   
+    text-decoration: none;
+    padding: 5px ;
+}
+.course-box .edit-course{
+    border: solid #5624d0 1px;
+    color: #5624d0;
+    font-size: .7rem;
+   
+    text-decoration: none;
+    padding: 5px ;
+    margin: 0 5px;
 }
 .page-wrapper .course-box .details-card{
     flex: 1;
@@ -52,8 +79,8 @@
     cursor: pointer;
 }
 .page-wrapper .course-box .details-card .status{
-    position: absolute;
-    bottom: 0;
+    
+    margin-top: 20px;
 }
 .page-wrapper .course-box .details-card .status span:nth-child(1) {
     font-size: .8rem;
@@ -68,6 +95,8 @@
 .page-wrapper .course-box .details-card .title{
     font-weight: 900;
     font-size: .8rem;
+   
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width:699px) {

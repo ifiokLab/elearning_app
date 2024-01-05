@@ -60,6 +60,29 @@
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
     border-radius: 10px;
     text-decoration: none;
+    position: relative;
+}
+.course-wrapper .course-container  .heart-button i{
+    padding: 4px 10px;
+}
+.course-wrapper .course-container  .heart-button{
+    position: absolute;
+    top: 0;
+    right: 20px;
+   
+}
+.course-wrapper .course-container  .red-heart i{
+    color: black;
+   
+}
+.search-wrapper{
+    margin-top: 50px;
+}
+.enrolled{
+    background-color: #2d2f31;
+    padding:2px 6px;
+    color: white;
+    font-size: .8rem;
 }
 
 .course-wrapper .course-container .card img{

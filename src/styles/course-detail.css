@@ -1,13 +1,15 @@
 
 .page-wrapper{
     flex: 2;
+    padding: 17px 0;
     
 }
 .landing-page-wrapper{
     background-color: #2d2f31;
     color:white ;
     padding: 35px 6%;
-    margin-top: 50px;
+    margin: 0;
+   
 }
 .landing-page-container{
     display: flex;
@@ -133,6 +135,10 @@
    margin-left: 8px;
    border: 1px solid #2d2f31;
 }
+.landing-page-container .container2 .heart-btn .red-heart i{
+    color: black;
+   
+}
 .landing-page-container .container2 .heart-btn:hover{
     background-color: #e4e8eb;
 }
@@ -217,7 +223,68 @@
 
 .accordion-wrapper .accordion-container .section-body .card{
     padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.preview-video-wrapper{
+    position: fixed;
+    left: 0;right: 0;
+    top: 0;bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preview-video-wrapper button{
+    background-color: white;
+    color: black;
+    border: transparent;
+   height: 30px;
+   width: 30px;
+   border-radius: 30px;
+   cursor: pointer;
    
+}
+.preview-video-wrapper button i{
+    font-size: .7rem;
+   font-weight: 900;
+}
+.preview-video-wrapper .preview-container{
+  
+    width: 600px;
+   
+    background-color: #2d2f31;
+    color: white;
+}
+.preview-video-wrapper .preview-header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+   
+}
+
+.preview-video-wrapper .preview-header span{
+    color: white;
+}
+.preview-video-wrapper .preview-header .title-header{
+    color: white;
+    font-weight: 700;
+    font-size: .8rem;
+    
+}
+.preview-video-wrapper .preview-title .title{
+    color: white;
+    padding: 4px 10px;
+    font-size: .8rem;
+}
+.preview-video-wrapper video{
+    width: 100%;
+    height: auto;
 }
 
 .requirements-container{
@@ -329,5 +396,11 @@
    .landing-page-container .container2{
         margin-left: 0px;
         
+    }
+}
+@media screen and (max-width:600px) {
+    .preview-video-wrapper{
+        align-items: flex-start;
+        background-color: rgba(0,0,0,.8);
     }
 }

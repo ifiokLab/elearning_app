@@ -1,0 +1,47 @@
+.wrapper .payment-method{
+    margin-bottom: 40px;
+}
+.wrapper .payment-wrapper .input-card{
+    color: black;
+    margin: 10px 0;
+}
+.wrapper .payment-wrapper .input-card input{
+    position: unset;
+    width: unset;
+    margin-right: 10px;
+   
+}
+.wrapper .payment-wrapper .input-card label{
+    color: black;
+    position: unset;
+    font-size: 1rem;
+    background-color: transparent;
+    margin-left: 5px;
+}
+#inner-cart-wrapper .cart-card img{
+    height: 50px;
+    width: auto;
+}
+#cart-checkout{
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.page-wrapper #checkout-title{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.total-card p{
+    font-size: .7rem;
+}
+.checkout-btn{
+    cursor: pointer;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

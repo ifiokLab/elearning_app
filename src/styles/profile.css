@@ -1,0 +1,38 @@
+
+.author-container{
+    padding: 20px 6%;
+}
+
+.author-container .profile-container img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.author-container .profile-container .caption{
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.author-container .profile-container  .name{
+    color: #7325a3;
+    font-weight: 900;
+}
+.phone, .website{
+    font-size: .7rem;
+}
+.phone i, .website i{
+    margin-right: 4px;
+}
+.website{
+    color: #7325a3;
+}
+.profile-edit{
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.author-container .profile-container .description{
+    margin-top: 10px;
+    font-size: .9rem;
+}

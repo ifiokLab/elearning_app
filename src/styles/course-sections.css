@@ -4,43 +4,67 @@
     padding: 20px;
     margin: 20px 0;
 }
-
-.section-wrapper .input-wrapper {
-    border: solid #2d2f31 1px;
-    padding: 10px;
-}
 .content-wrapper{
     border: solid #2d2f31 1px;
     padding: 10px;
-    margin: 10px 0;
-}
-.section-wrapper .input-wrapper input{
-    margin: 5px 0;
-}
-.section-wrapper .add-section-btn{
-    border: solid #2d2f31 1px;
-    background-color: transparent;
-    padding: 5px 20px;
-    cursor: pointer;
-    margin: 10px 10px 0 0;
-}
-.section-wrapper .save-content{
-    background-color: #2d2f31;
-    color: white;
-    padding: 5px 20px;
-    cursor: pointer;
-    border: transparent;
-}
-.section-wrapper .add-section-btn i{
-    margin-right: 4px;
+    margin: 6px 0; 
 }
 
-.section-wrapper .delete-section-btn{
+.wrapper{
+    padding: 20px 0;
+
+}
+
+.section-wrapper input{
+    margin: 8px 0;
+}
+.section-wrapper input:focus,.section-wrapper textarea:focus{
+    outline: solid 1px #2d2f31;
+    border: transparent;
+}
+.section-wrapper .editor-box{
+    margin: 6px 0;
+}
+
+.section-wrapper .add-section-btn{
+    background-color: #2d2f31;
+    color: white;
+    border: transparent;
+    padding: 6px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.section-wrapper .section-header{
+    display: flex;
+    align-items: center;
+}
+.section-wrapper .section-header h3{
+    font-size: 1rem;
+    margin-right: 20px;
+    
+}
+.section-wrapper  .edit-btn i{
+    color: #2d2f31;
+}
+.section-wrapper  .delete-btn i{
+    color: red;
+}
+.section-wrapper .section-header button{
+    padding: 5px;
     background-color: transparent;
     border: transparent;
-    margin-left: 20px;
-    padding: 6px;
+    margin:  0 4px;
 }
-.section-wrapper .delete-section-btn i{
-    color: red;
+.section-wrapper .section-header .add-content{
+    background-color: #2d2f31;
+    padding: 6px 10px;
+    color: white;
+}
+.content-wrapper p{
+    margin: 3px 0;
+}
+.content-wrapper button{
+    background-color: transparent;
+    border: transparent;
+    margin: 0 4px;
 }

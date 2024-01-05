@@ -1,0 +1,32 @@
+#form-container-requirement{
+  box-shadow: none;
+    max-width: 100%;
+}
+
+.requirements-list .save-btn{
+  background-color: #2d2f31;
+  color: white;
+  cursor: pointer;
+  border: transparent;
+  padding: 4px 10px;
+  margin:10px 0;
+}
+.requirements-list input:focus{
+  outline: solid #2d2f31 1px;
+}
+.requirements-list .edit-btn{
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.requirements-list .delete-btn{
+  background-color: transparent;
+  border: transparent;
+}
+
+.requirements-list .edit-btn i{
+  color:  #2d2f31;
+}
+.requirements-list .delete-btn i{
+  color: red;
+}

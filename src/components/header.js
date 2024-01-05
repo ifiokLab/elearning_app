@@ -2,16 +2,24 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import { Autoplay,Pagination,Navigation } from 'swiper/modules'
-
+import { useSelector } from 'react-redux';
 import 'swiper/swiper-bundle.css';
 import '../styles/header.css';
 import logo from '../styles/logo.svg';
 import hero1 from '../styles/hero1.jpg';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../actions/user-action'; // Import actions
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ()=>{
+    const dispatch = useDispatch();
+    const user = useSelector((state) => state.user);
     const [searchQuery, setSearchQuery] = useState('');
     const [sidebarOpen,setsidebarOpen] = useState(false);
+    const [profileModal,setProfileModal] = useState(false);
     const [subCategory,setsubCategory] = useState('');
+    const navigate = useNavigate()
     
     const toggleSidebar = ()=>{
         setsidebarOpen(!sidebarOpen);
@@ -31,26 +39,47 @@ const Header = ()=>{
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // You can perform search-related actions here based on the searchQuery state
-        console.log('Search Query:', searchQuery);
-        alert(searchQuery);
+       
+        navigate(`/search?query=${searchQuery}`);
+    };
+    const handleLogout = async () => {
+        try {
+          // Make a POST request to the logout endpoint
+          const response = await axios.post('http://127.0.0.1:8000/logout/');
+    
+          if (response.data.success) {
+            // Clear the user data in Redux store
+            dispatch(setUser(null));
+            navigate('/logout');
+    
+            // Optionally, you may want to redirect the user to the login page
+            // history.push('/login');
+          } else {
+            console.error('Logout failed:', response.data.message);
+            // Handle failed logout, e.g., show an error message to the user
+          }
+        } catch (error) {
+          console.error('An error occurred during logout:', error);
+          // Handle unexpected errors
+        }
     };
     const slides = [
        logo,
        hero1,
         // Add more image URLs as needed
     ];
+
     return(
         <div className='header-wrapper'>
             <header className='header'>
-                <div className='logo'>
-                    Elearning
-                </div>
+                <Link to='/' className='logo'>
+                    Elearning  
+                </Link>
                 <div className='category-tab'>
                     <div className='title'>Categories</div>
                     <div className='category-menu'>
                         <div className='category-section'>
-                            <Link to='' className='link-tab'>
+                            <Link to='/search?query=Development' className='link-tab'>
                                 <div className='text'>Development</div>
                                 <div className='icon'>
                                     <i class="fa-solid fa-chevron-right"></i>
@@ -59,7 +88,7 @@ const Header = ()=>{
                             </Link>
                             <div className='sub-category' >
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Web Development' className='link-tab'>
                                         <div className='text'>Web Development</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -68,7 +97,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Mobile App Development' className='link-tab'>
                                         <div className='text'>Mobile App Development</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -77,7 +106,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Data Science' className='link-tab'>
                                         <div className='text'>Data Science</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -86,7 +115,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Web Development' className='link-tab'>
                                         <div className='text'>Web Development</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -95,7 +124,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Programming Languages' className='link-tab'>
                                         <div className='text'>Programming Languages</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -104,7 +133,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Database design & Game Development' className='link-tab'>
                                         <div className='text'>Database design & Game Development</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -113,7 +142,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Software Testing' className='link-tab'>
                                         <div className='text'>Software Testing</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -122,7 +151,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Software Engineering' className='link-tab'>
                                         <div className='text'>Software Engineering</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -131,7 +160,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Programming Languages' className='link-tab'>
                                         <div className='text'>Programming Languages</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -140,7 +169,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=Software Development Tools' className='link-tab'>
                                         <div className='text'>Software Development Tools</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -149,7 +178,7 @@ const Header = ()=>{
                                     </Link>
                                 </div>
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=No-Code Development' className='link-tab'>
                                         <div className='text'>No-Code Development</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -160,7 +189,7 @@ const Header = ()=>{
                             </div>
                         </div>
                         <div className='category-section'>
-                            <Link to='' className='link-tab'>
+                            <Link to='/search?query=Finance & Accounting' className='link-tab'>
                                 <div className='text'>Finance & Accounting</div>
                                 <div className='icon'>
                                     <i class="fa-solid fa-chevron-right"></i>
@@ -169,7 +198,7 @@ const Header = ()=>{
                             </Link>
                             <div className='sub-category' >
                                 <div className='sub-category-section'>
-                                    <Link to='' className='link-tab'>
+                                    <Link to='/search?query=>Accounting & Bookkeeping' className='link-tab'>
                                         <div className='text'>Accounting & Bookkeeping</div>
                                         <div className='icon'>
                                             <i class="fa-solid fa-chevron-right"></i>
@@ -511,7 +540,7 @@ const Header = ()=>{
                 </form>
                 <div className='nav-section'>
                     <div className='teach'>
-                        <Link className='title' to='/teach'>Teach on Diaspora</Link>
+                        <Link className='title' to='/teach'>Teach</Link>
                         <div className='teach-tab'>
                             <div className='turn'>
                                 Turn what you know into an opportunity and reach millions around the world.
@@ -522,7 +551,7 @@ const Header = ()=>{
                         </div>
                     </div>
                     <div className='cart'>
-                    <Link to='/blogs'>
+                    <Link to='/cart/'>
                             <i className="fas fa-shopping-cart"></i>
                     </Link>
                     <div className='cart-tab'>
@@ -534,12 +563,39 @@ const Header = ()=>{
                             </div>
                         </div>
                     </div>
-                    <Link to='/blogs' className='login'>
-                        Login
-                    </Link>
-                    <Link to='/blogs' className='signup'>
-                        signup
-                    </Link>
+                    {user.user? ( 
+                            <>
+                                <button onClick={handleLogout} className='login'>
+                                    Logout 
+                                </button>
+                                <div className='user-icon-container'>
+                                    <div className='initial'>{user.user.first_name[0].toUpperCase()} {user.user.last_name[0].toUpperCase()}</div>
+                                    <i className="fa-solid fa-circle dot"></i>
+                                    <div className = 'profile-card-container'>
+                                        <Link to='/profile/' className='profile-link'>Profile</Link>
+                                        <Link to='/profile/edit/' className='profile-link'>Edit profile</Link>
+                                        <div onClick={handleLogout} className='profile-link logout'>
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            Logout
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                         )
+                        :
+                        (
+                           <>
+                                <Link to='/login' className='offline-login'>
+                                    Login
+                                </Link>
+                                <Link to='/signup' className='offline-signup'>
+                                    signup
+                                </Link>
+                           </>
+                        )
+                    }
+                  
+                    
                 </div>
             </header>
             <header className='mobile-navigation'>
@@ -550,9 +606,9 @@ const Header = ()=>{
                     <div className='title'>Elearning</div>
                 </div>
                 <div className='mobile-extra'>
-                    <div className='cart'>
+                    <Link to='/cart/' className='cart'>
                         <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
+                    </Link>
                     <div className='search'>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
