@@ -756,7 +756,7 @@ class CheckoutView(APIView):
     def post(self, request, *args, **kwargs):
        
         stripe.api_key = ""
-
+        #sk_test_51MqMCzE0QuPBMsJ4GQmlZdaPbRphrv3cdthwpQIsf2X5Z2Bz9EHMEvi3rIjH005ewvUyQ91NUJ4B0Kupkv18d3bc00Ooulm6QJ
         auth_header = request.headers.get('Authorization', '')
         _, token = auth_header.split()
         print('token:',token)
